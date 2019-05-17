@@ -29,6 +29,18 @@ module.exports = {
     filename: 'workbench.html',
     template: 'src/workbench/index.html'
   }),
+  new HtmlWebpackPlugin({  // Also generate a test.html
+    filename: 'admin.html',
+    template: 'src/admin/index.html'
+  }),
+  new HtmlWebpackPlugin({  // Also generate a test.html
+    filename: 'dashboard.html',
+    template: 'src/dashboard/index.html'
+  }),
+  new HtmlWebpackPlugin({  // Also generate a test.html
+    filename: 'logging.html',
+    template: 'src/logging/index.html'
+  }),
   extractCss],
   module: {
     rules: [
