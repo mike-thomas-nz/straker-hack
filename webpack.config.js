@@ -24,7 +24,12 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin({  // Also generate a test.html
     filename: 'index.html',
     template: 'src/index.html'
-  }), extractCss],
+  }),
+  new HtmlWebpackPlugin({  // Also generate a test.html
+    filename: 'workbench.html',
+    template: 'src/workbench/index.html'
+  }),
+  extractCss],
   module: {
     rules: [
       {
