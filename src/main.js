@@ -1,12 +1,13 @@
-import * as videoplayer from "./videoplayer";
+import * as videoplayer from "./workbench/videoplayer";
 
-import './editor.js';
-import './util.js';
+import './workbench/editor.js';
+import './workbench/util.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'video.js/dist/video-js.css';
 import './style.css';
 let videoSrc = '/resources/video/rocket/640x480/rocket.mp4'
+let srtSrc = '/resources/subs/rocket/english_webvtt.srt'
 videoplayer.init('my-player', videoSrc, {
   controls: true,
   autoplay: false,
@@ -14,7 +15,7 @@ videoplayer.init('my-player', videoSrc, {
   width: '640',
   height: '400'
 },[{
-  src: '/resources/subs/rocket/english_webvtt.srt',
+  src: srtSrc,
   kind: 'captions',
   srclang: 'en',
   label: 'English',
