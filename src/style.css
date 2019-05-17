@@ -1,0 +1,29 @@
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+.alert {
+    position:absolute;
+    z-index:1;
+    right: 100;
+    color: #FFF;
+}
+
+.player {
+    background-color: aliceblue;
+}
+
+.active-caption {
+    background-color: lightblue;
+}
+
+.infoTable {
+    background: rgba(76, 175, 80, 0.3);
+    color: #FFF;
+}

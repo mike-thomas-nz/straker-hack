@@ -1,0 +1,8 @@
+mike/node_modules
+mike/resources/video
+src/resources/video
+dist/
+*.mp4
+node_modules
+
+
