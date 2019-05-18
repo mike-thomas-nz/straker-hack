@@ -10,7 +10,11 @@ import $ from "jquery";
             h = checkTime(today.getHours()),
             m = checkTime(today.getMinutes()),
             s = checkTime(today.getSeconds());
-        document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+
+        if (document.getElementById('time')) {
+            document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+        }
+
         setTimeout(function () {
             startTime()
         }, 500);
