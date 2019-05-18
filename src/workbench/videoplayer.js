@@ -1,7 +1,7 @@
 import videojs from "video.js"
 
 let player = undefined
-let currentCue = 1
+let currentCueId = 1
 const init = (elementId, video, config, textTracks) => {
   player = videojs(elementId, config);
   player.ready(() => {
@@ -11,6 +11,11 @@ const init = (elementId, video, config, textTracks) => {
     })
     // Add text tracks if available
     createTextTracks(player, textTracks)
+    setTimeout(() => {
+      let element = document.getElementById(`caption_${currentCueId}`)
+      element.scrollIntoView({behavior: "smooth", block: "center"})
+      element.setAttribute('class', 'active-caption')
+    }, 1000);
   });
 
   // Add support for listening to cue changes
@@ -19,15 +24,18 @@ const init = (elementId, video, config, textTracks) => {
     tt.oncuechange = function () {
       if (tt.activeCues[0] !== undefined) {
         if(!isNaN(tt.activeCues[0].id)){
-          let cueId = tt.activeCues[0].id
-          let previousElements = document.getElementsByClassName('active-caption')
-          for (let i=0; i<previousElements.length; i++) {
-            previousElements[i].classList.remove('active-caption');
-          }
-          let element = document.getElementById(`caption_${cueId}`)
-          element.scrollIntoView({behavior: "smooth", block: "center"})
-          element.setAttribute('class', 'active-caption')
-          if (cueId > 1) {
+          currentCueId = tt.activeCues[0].id
+          // if (cueId > 1) {
+          //   cueId -= 1
+          // }
+          // let previousElements = document.getElementsByClassName('active-caption')
+          // for (let i=0; i<previousElements.length; i++) {
+          //   previousElements[i].classList.remove('active-caption');
+          // }
+          // let element = document.getElementById(`caption_${cueId}`)
+          // element.scrollIntoView({behavior: "smooth", block: "center"})
+          // element.setAttribute('class', 'active-caption')
+          if (currentCueId > 1) {
             player.pause()
           }
         }
@@ -46,6 +54,14 @@ const pause = () => {
 // Play
 const play = () => {
   if (player) {
+    let cueId = currentCueId
+    let previousElements = document.getElementsByClassName('active-caption')
+    for (let i=0; i<previousElements.length; i++) {
+      previousElements[i].classList.remove('active-caption');
+    }
+    let element = document.getElementById(`caption_${cueId}`)
+    element.scrollIntoView({behavior: "smooth", block: "center"})
+    element.setAttribute('class', 'active-caption')
     player.play()
   }
 }
