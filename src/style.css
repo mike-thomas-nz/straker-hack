@@ -1,6 +1,6 @@
 .my-custom-scrollbar {
     position: relative;
-    height: 200px;
+    height: 330px;
     overflow: auto;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .player {
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
 }
 
 .active-caption {
