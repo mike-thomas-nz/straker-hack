@@ -25,16 +25,6 @@ const init = (elementId, video, config, textTracks) => {
       if (tt.activeCues[0] !== undefined) {
         if(!isNaN(tt.activeCues[0].id)){
           currentCueId = tt.activeCues[0].id
-          // if (cueId > 1) {
-          //   cueId -= 1
-          // }
-          // let previousElements = document.getElementsByClassName('active-caption')
-          // for (let i=0; i<previousElements.length; i++) {
-          //   previousElements[i].classList.remove('active-caption');
-          // }
-          // let element = document.getElementById(`caption_${cueId}`)
-          // element.scrollIntoView({behavior: "smooth", block: "center"})
-          // element.setAttribute('class', 'active-caption')
           if (currentCueId > 1) {
             player.pause()
           }

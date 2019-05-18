@@ -3,6 +3,7 @@ import * as player from "./videoplayer";
 import Papa from "papaparse";
 let srtSrc = '/resources/subs/animation/english__chinese.csv'
 // let srtSrc = '/resources/subs/animation/english.srt'
+// eslint-disable-next-line no-unused-vars
 var PF_SRT = function() {
   // eslint-disable-next-line
   var pattern = /(\d+)\n([\d:.]+)\s+-{2}\>\s+([\d:.]+)\n([\s\S]*?(?=\n{2}|$))/gm;
