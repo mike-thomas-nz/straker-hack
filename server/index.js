@@ -7,7 +7,7 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-var trans = "trans demo";
+var trans = "James Hanson";
 
 io.on('connection', function(socket){
   console.log('a user connected');
@@ -25,9 +25,14 @@ io.on('connection', function(socket){
     io.emit('disconnected', discon);
   });
 
-  socket.on('chat message', function(msg){
+  socket.on('translate', function(msg){
     console.log(msg);
-    io.emit('chat message', msg);
+    io.emit('translate', msg);
+  });
+
+  socket.on('saved', msg => {
+    console.log(msg);
+    io.emit('segment_saved', msg);
   });
 
 });

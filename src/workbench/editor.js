@@ -1,6 +1,6 @@
 import $ from "jquery";
 import { pausePlayer } from "./videoplayer";
-
+let srtSrc = '/resources/subs/animation/english.srt'
 var PF_SRT = function() {
   // eslint-disable-next-line
   var pattern = /(\d+)\n([\d:.]+)\s+-{2}\>\s+([\d:.]+)\n([\s\S]*?(?=\n{2}|$))/gm;
@@ -39,14 +39,14 @@ var PF_SRT = function() {
 
 // Load the segments in editor
 const loadSegments= () => {
-  $.get('resources/subs/rocket/english_webvtt.srt')
+  $.get(srtSrc)
     .done(function(text) {
       try {
         //Array with {line, startTime, endTime, text}
         var result = PF_SRT.parse(text);
 
         $.each(result, function(index, value) {
-          $("#table_div").append("<tr id=caption_"+value.line+"><td>"+value.line+"</td><td>" + value.startTime + " - "+ value.endTime + "</td><td>" + value.text + "</td><td><div class='editable_seg' contenteditable=true></div></div></td><td><button class='btn btn-success btn-sm'>Save</button></td></td></tr>");
+          $("#table_div").append("<tr id=caption_"+value.line+"><td>"+value.line+"</td><td>" + value.startTime + " - "+ value.endTime + "</td><td>" + value.text + "</td><td><div class='editable_seg' contenteditable=true></div></div></td><td><button class='save btn btn-success btn-sm'>Save</button></td></td></tr>");
         });
       } catch (e) {
         // console.log(e);
@@ -70,12 +70,26 @@ const saveSegments = (data) => {
     })
 }
 
-$('.editable_seg').on('input', () =>{
-  console.log('edited...');
-})
 const editSegment = () => {
   pausePlayer()
 }
+
+// $('.save').on('click', e => {
+//   console.log('saved');
+//   // socket.emit('saved');
+// });
+
+setTimeout(() => {
+  $('.editable_seg').on('input', () =>{
+    // eslint-disable-next-line no-console
+    console.log('edited...');
+  });
+
+  $('.save').click(() => {
+    console.log('click');
+    window.socket.emit('saved')
+  });
+}, 1000)
 
 export {
   saveSegments,

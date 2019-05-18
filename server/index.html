@@ -32,7 +32,7 @@
           var msg = [];
               msg.push($('#t').val());
               msg.push($('#m').val());
-          socket.emit('chat message', msg);
+          socket.emit('translate', msg);
           $('#m').val('');
           return false;
         });
@@ -47,7 +47,7 @@
           window.scrollTo(0, document.body.scrollHeight);
         });
 
-        socket.on('chat message', function(msg){
+        socket.on('translate', function(msg){
           $('#messages').append($('<li>').text(msg));
           window.scrollTo(0, document.body.scrollHeight);
         });
