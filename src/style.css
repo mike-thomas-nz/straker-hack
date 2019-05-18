@@ -59,7 +59,5 @@
 
 .uploadimage-dragndrop {
     border: 5px dashed lightgray;
-    height: 280px;
-    padding: 50px 100px;
-    width: 400px;
+    padding: 10px 30px;
 }
