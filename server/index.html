@@ -28,7 +28,7 @@
       $(function () {
         var socket = io();
         
-        $('form').submit(function(){
+        $('.save').click(function(){
           var msg = [];
               msg.push($('#t').val());
               msg.push($('#m').val());

@@ -32,7 +32,7 @@ io.on('connection', function(socket){
 
   socket.on('saved', msg => {
     console.log("user saved a segment");
-    io.emit('segment_saved', msg);
+    io.emit('segment_saved', [trans, "Segment saved"]);
   });
 
 });

@@ -50,8 +50,8 @@ def build_ffmpeg(times, file)
     ffmpeg += times.map.with_index { |t,i|
         if i-1 > 0
             skip = t[0][0] - times[i-1][1][0]
-            p skip
         else
+            
         end
     }
 
