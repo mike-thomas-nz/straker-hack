@@ -1,4 +1,5 @@
 import $ from "jquery";
+import { pausePlayer } from "./videoplayer";
 
 var PF_SRT = function() {
   // eslint-disable-next-line
@@ -45,30 +46,40 @@ const loadSegments= () => {
         var result = PF_SRT.parse(text);
 
         $.each(result, function(index, value) {
-          $("#table_div").append("<tr id=caption_"+value.line+"><td>"+value.line+"</td><td>" + value.startTime + " - "+ value.endTime + "</td><td>" + value.text + "</td><td><div id='editable' contenteditable=true></div></div></td><td><button class='btn btn-success btn-sm'>Save</button></td></td></tr>");
+          $("#table_div").append("<tr id=caption_"+value.line+"><td>"+value.line+"</td><td>" + value.startTime + " - "+ value.endTime + "</td><td>" + value.text + "</td><td><div class='editable_seg' contenteditable=true></div></div></td><td><button class='btn btn-success btn-sm'>Save</button></td></td></tr>");
         });
-
       } catch (e) {
         // console.log(e);
         //handle parsing error
       }
   });
 }
+
 loadSegments()
 
 const saveSegments = (data) => {
   let url = ''
   $.post(url, data)
     .done((response) => {
+      // eslint-disable-next-line no-console
       console.log(response);
     })
     .catch((error) => {
+      // eslint-disable-next-line no-console
       console.log(error);
     })
 }
 
+$('.editable_seg').on('input', () =>{
+  console.log('edited...');
+})
+const editSegment = () => {
+  pausePlayer()
+}
+
 export {
-  saveSegments
+  saveSegments,
+  editSegment
 }
 
 

@@ -1,9 +1,14 @@
 import videojs from "video.js"
 
-const init = (elementId, videoSrc, config, textTracks) => {
-  let player = videojs(elementId, config);
+let player = undefined
+
+const init = (elementId, video, config, textTracks) => {
+  player = videojs(elementId, config);
   player.ready(() => {
-    player.src(videoSrc)
+    player.src({
+      src: video.src,
+      type: video.type
+    })
     // Add text tracks if available
     createTextTracks(player, textTracks)
   });
@@ -28,6 +33,13 @@ const init = (elementId, videoSrc, config, textTracks) => {
   });
 }
 
+// Pause player
+const pausePlayer = () => {
+  if (player) {
+    player.pause()
+  }
+}
+
 // Add text tracks
 const createTextTracks = async (player, textTracks) => {
   textTracks.forEach((track) => {
@@ -43,5 +55,6 @@ const createTextTracks = async (player, textTracks) => {
 }
 
 export {
-  init
+  init,
+  pausePlayer
 }
