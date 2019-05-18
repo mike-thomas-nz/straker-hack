@@ -7,7 +7,7 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-var trans = "trans demo";
+var trans = "James Hanson";
 
 io.on('connection', function(socket){
   console.log('a user connected');
