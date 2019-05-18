@@ -3,13 +3,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Test Video js</title>
+    <title>Workbench</title>
   </head>
   <body>
-    <div class="container-fluid">
-        <div class="row" style="margin-bottom: 20px;">
-            <div class="col-md-2"></div>
-            <div class="col-md-6">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/">Gringotts</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="workbench.html">Workbench</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.html">Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logging.html">Logging</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main role="main" class="container">
+        <h1>Workbench</h1>
+        <div class="row">
+            <div class="col-md-8">
                 <div id="time" class="alert">hh:mm:yy</div>
                 <div id="info" class="alert">
                     <table id="infoTable" class="infoTable" width="200px">
@@ -19,7 +41,12 @@
                     <video-js id="my-player"></video-js>
                 </div>
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h2>Boaty McBoatface</h2>
+                <p>
+                    Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
+                </p>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -35,12 +62,12 @@
                             </tr>
                         </thead>
                         <tbody id="table_div">
-
                         </tbody>
                     </table>
-              </div>
+            </div>
             </div>
         </div>
-        <script type="text/javascript" src="bundle.js"></script></body>
+    </main>
+    <script type="text/javascript" src="bundle.js"></script></body>
   </body>
 </html>
