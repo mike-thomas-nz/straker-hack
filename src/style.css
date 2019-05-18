@@ -1,6 +1,6 @@
 .my-custom-scrollbar {
     position: relative;
-    height: 200px;
+    height: 400px;
     overflow: auto;
 }
 
@@ -11,12 +11,13 @@
 .alert {
     position:absolute;
     z-index:1;
-    right: 100;
+    left: 330;
     color: #FFF;
 }
 
 .player {
     background-color: aliceblue;
+    align-self: center;
 }
 
 .active-caption {

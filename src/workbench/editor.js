@@ -36,18 +36,40 @@ var PF_SRT = function() {
   }
 }();
 
-$.get('resources/subs/rocket/english_webvtt.srt')
-  .done(function(text) {
-    try {
-      //Array with {line, startTime, endTime, text}
-      var result = PF_SRT.parse(text);
+// Load the segments in editor
+const loadSegments= () => {
+  $.get('resources/subs/rocket/english_webvtt.srt')
+    .done(function(text) {
+      try {
+        //Array with {line, startTime, endTime, text}
+        var result = PF_SRT.parse(text);
 
-      $.each(result, function(index, value) {
-        $("#table_div").append("<tr id=caption_"+value.line+"><td>"+value.line+"</td><td>" + value.startTime+ "</td><td>" + value.text + "</td><td><div id='editable' contenteditable=true></div></div></td><td><button class='btn btn-success btn-sm'>Save</button></td></td></tr>");
-      });
+        $.each(result, function(index, value) {
+          $("#table_div").append("<tr id=caption_"+value.line+"><td>"+value.line+"</td><td>" + value.startTime + " - "+ value.endTime + "</td><td>" + value.text + "</td><td><div id='editable' contenteditable=true></div></div></td><td><button class='btn btn-success btn-sm'>Save</button></td></td></tr>");
+        });
 
-    } catch (e) {
-      // console.log(e);
-      //handle parsing error
-    }
-});
+      } catch (e) {
+        // console.log(e);
+        //handle parsing error
+      }
+  });
+}
+loadSegments()
+
+const saveSegments = (data) => {
+  let url = ''
+  $.post(url, data)
+    .done((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+}
+
+export {
+  saveSegments
+}
+
+
+
