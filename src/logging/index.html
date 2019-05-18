@@ -1,90 +1,376 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Logging</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-</head>
-<body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="/">Gringotts</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>The VAULT : Straker Translations</title>
+    <!-- Icons-->
+    <link href="vendors/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="vendors/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+    </script>
+  </head>
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="workbench.html">Localizer</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="admin.html">Admin</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="dashboard.html">Dashboard</a>
-          </li> -->
-          <li class="nav-item active">
-            <a class="nav-link" href="logging.html">Logging</a>
-          </li>
-        </ul>
-        <span style="color:rgba(255, 255, 255, 0.75);">Hi John <i class="fas fa-sliders-h fa-md fa-user-shield" style="color:#fff;"></i></span>
-      </div>
-    </nav>
-    <main role="main" class="container">
-      <div class="row">
-        <!-- <div class="col-sm-3">
-          <ul class="list-group">
-            <li class="list-group-item">
-              <div class="btn btn-dark btn-lg">
-                <i class="fas fa-sliders-h fa-md fa-user-shield"></i>
-              </div> Hi John</li>
-            <li class="list-group-item">Home</li>
-            <li class="list-group-item">Upload</li>
-            <li class="list-group-item">Reporting</li>
-            <li class="list-group-item">Help</li>
+      <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="assets/images/Straker_Logo.png" width="120" height="45" alt="CoreUI Logo">
+        <img class="navbar-brand-minimized" src="assets/images/Straker_Logo.png" width="30" height="30" alt="CoreUI Logo">
+      </a>
+      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="dashboard.html">Dashboard</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="admin.html">Process</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="logging.html">Logs</a>
+        </li>
+      </ul>      
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item d-md-down-none">
+          <a class="nav-link" href="#">
+            <i class="icon-bell"></i>
+            <span class="badge badge-pill badge-danger">5</span>
+          </a>
+        </li>
+        <li class="nav-item d-md-down-none">
+          <a class="nav-link" href="#">
+            <i class="icon-list"></i>
+          </a>
+        </li>
+        <li class="nav-item d-md-down-none">
+          <a class="nav-link" href="#">
+            <i class="icon-location-pin"></i>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header text-center">
+              <strong>Account</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-bell-o"></i> Updates
+              <span class="badge badge-info">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-envelope-o"></i> Messages
+              <span class="badge badge-success">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-tasks"></i> Tasks
+              <span class="badge badge-danger">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-comments"></i> Comments
+              <span class="badge badge-warning">42</span>
+            </a>
+            <div class="dropdown-header text-center">
+              <strong>Settings</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-user"></i> Profile</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-wrench"></i> Settings</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-usd"></i> Payments
+              <span class="badge badge-secondary">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-file"></i> Projects
+              <span class="badge badge-primary">42</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-shield"></i> Lock Account</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-lock"></i> Logout</a>
+          </div>
+        </li>
+      </ul>
+      <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </header>
+    <div class="app-body">
+      <div class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item">
+            <li class="nav-title"> Dashboard</li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> Base</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="base/breadcrumb.html">
+                    <i class="nav-icon icon-puzzle"></i> Breadcrumb</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/cards.html">
+                    <i class="nav-icon icon-puzzle"></i> Cards</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/carousel.html">
+                    <i class="nav-icon icon-puzzle"></i> Carousel</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/collapse.html">
+                    <i class="nav-icon icon-puzzle"></i> Collapse</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/forms.html">
+                    <i class="nav-icon icon-puzzle"></i> Forms</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/jumbotron.html">
+                    <i class="nav-icon icon-puzzle"></i> Jumbotron</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/list-group.html">
+                    <i class="nav-icon icon-puzzle"></i> List group</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/navs.html">
+                    <i class="nav-icon icon-puzzle"></i> Navs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/pagination.html">
+                    <i class="nav-icon icon-puzzle"></i> Pagination</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/popovers.html">
+                    <i class="nav-icon icon-puzzle"></i> Popovers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/progress.html">
+                    <i class="nav-icon icon-puzzle"></i> Progress</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/scrollspy.html">
+                    <i class="nav-icon icon-puzzle"></i> Scrollspy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/switches.html">
+                    <i class="nav-icon icon-puzzle"></i> Switches</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/tables.html">
+                    <i class="nav-icon icon-puzzle"></i> Tables</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/tabs.html">
+                    <i class="nav-icon icon-puzzle"></i> Tabs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/tooltips.html">
+                    <i class="nav-icon icon-puzzle"></i> Tooltips</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-cursor"></i> Process</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/buttons.html">
+                    <i class="nav-icon icon-cursor"></i> Buttons</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/button-group.html">
+                    <i class="nav-icon icon-cursor"></i> Buttons Group</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/dropdowns.html">
+                    <i class="nav-icon icon-cursor"></i> Dropdowns</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/brand-buttons.html">
+                    <i class="nav-icon icon-cursor"></i> Brand Buttons</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="charts.html">
+                <i class="nav-icon icon-pie-chart"></i> Charts</a>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-star"></i> Icons</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="icons/coreui-icons.html">
+                    <i class="nav-icon icon-star"></i> CoreUI Icons
+                    <span class="badge badge-success">NEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="icons/flags.html">
+                    <i class="nav-icon icon-star"></i> Flags</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="icons/font-awesome.html">
+                    <i class="nav-icon icon-star"></i> Font Awesome
+                    <span class="badge badge-secondary">4.7</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="icons/simple-line-icons.html">
+                    <i class="nav-icon icon-star"></i> Simple Line Icons</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-bell"></i> Logs</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="notifications/alerts.html">
+                    <i class="nav-icon icon-bell"></i> Alerts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="notifications/badge.html">
+                    <i class="nav-icon icon-bell"></i> Badge</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="notifications/modals.html">
+                    <i class="nav-icon icon-bell"></i> Modals</a>
+                </li>
+              </ul>
+            </li>
           </ul>
-        </div>
-        <div class="col-sm-9"> -->
-        <div class="col-sm-12">
-          <form>
-              <div class="form-row">
-                <div class="col-sm-10">
-                  <input type="text" class="form-control bg-dark" id="Search" placeholder="Search" aria-describedby="search-button">
-                </div>
-                <div class="col-sm-2">
-                    <button class="btn btn-outline-secondary btn-lg" type="button" id="search-button"><i class="fas fa-sliders-h fa-md fa-rotate-90"></i></button>
-                </div>
-              </div>
-          </form>
-          <div class="table-responsive">
-              <table class="table table-bordered mb-0">
-                  <thead>
-                      <tr>
-                          <th>Date</th>
-                          <th>User</th>
-                          <th>Action</th>
-                          <th>Detail</th>
-                      </tr>
-                  </thead>
-                  <tbody id="table_logging">
-                      <tr>
-                        <td>Sat May 18 2019 16:29:35 GMT+1200 (New Zealand Standard Time)	</td>
-                        <td>James Hanson</td>
-                        <td>Successfully Processed Content</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Sat May 18 2019 16:29:35 GMT+1200 (New Zealand Standard Time)	</td>
-                        <td>James Hanson</td>
-                        <td>Submitted Content for Processing</td>
-                        <td></td>
-                      </tr>
-                  </tbody>
-              </table>
+        </nav>
+        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+      </div>
+      <main class="main">
+        <!-- Breadcrumb-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">
+            <a href="#">Admin</a>
+          </li>
+          <li class="breadcrumb-item active">Logs</li>
+          <!-- Breadcrumb Menu-->
+          <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+              <a class="btn" href="#">
+                <i class="icon-speech"></i>
+              </a>
+              <a class="btn" href="./">
+                <i class="icon-graph"></i>  Dashboard</a>
+              <a class="btn" href="#">
+                <i class="icon-settings"></i>  Settings</a>
+            </div>
+          </li>
+        </ol>
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            <!-- /.row-->
+            <div class="row">
+                    <div class="col-lg-12">
+                      <div class="card">
+                        <div class="card-header">
+                          <i class="fa fa-align-justify"></i> Translations Activity</div>
+                        <div class="card-body">
+                          <table class="table table-responsive-sm table-bordered table-striped table-sm">
+                            <thead>
+                              <tr>
+                                <th>Date</th>
+                                <th>User</th>
+                                <th>Detail</th>
+                                <th>&nbsp;</th>
+                              </tr>
+                            </thead>
+                            <tbody id="table_logging">
+                                <tr>
+                                    <td>Sat May 18 2019 16:19:35</td>
+                                    <td>James Hanson</td>
+                                    <td>Submitted Content for Processing</td>
+                                    <td>
+                                        <span class="badge badge-warning">Processing</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sat May 18 2019 16:29:35</td>
+                                    <td>James Hanson</td>
+                                    <td>Successfully Processed Content</td>
+                                    <td>
+                                    <span class="badge badge-success">Processed</span>
+                                  </td>
+                                </tr>
+
+                              <tr>
+                                    <td>Sat May 18 2019 20:19:35</td>
+                                    <td>Vishnu Serghei</td>
+                                    <td>connected</td>
+                                    <td>
+                                    <span class="badge badge-success">Active</span>
+                                    </td>
+                              </tr>
+                              <tr>
+                                    <td>Sat May 18 2019 22:19:35</td>
+                                    <td>Vishnu Sergheis</td>
+                                    <td>disconnected</td>
+                                    <td>
+                                    <span class="badge badge-secondary">Inactive</span>
+                                    </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.col-->
+                  </div>
           </div>
         </div>
+      </main>
+    </div>
+    <footer class="app-footer">
+      <div>
       </div>
-    </main>
+      <div class="ml-auto">
+      </div>
+    </footer>
+    <!-- CoreUI and necessary plugins-->
+    <script src="vendors/jquery/js/jquery.min.js"></script>
+    <script src="vendors/popper.js/js/popper.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/pace-progress/js/pace.min.js"></script>
+    <script src="vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="vendors/@coreui/coreui/js/coreui.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="vendors/chart.js/js/Chart.min.js"></script>
+    <script src="vendors/@coreui/coreui-plugin-chartjs-custom-tooltips/js/custom-tooltips.min.js"></script>
+    <script src="js/main.js"></script>
+
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
@@ -105,7 +391,7 @@
   });
 
   socket.on('translate', function(msg){
-    tableUp(msg[0], 'Translated' , msg[1]);
+    tableUp(msg[0], msg[1], '');
   });
 
  });
@@ -113,10 +399,11 @@
  function tableUp(msg1, msg2, msg3) {
     var today = new Date();
     console.log(today);
-    var markup = "<tr><td>" +today+ "</td><td>" +msg1+ "</td><td>"+msg2+"</td><td>"+msg3+"</td></tr>";
+    var markup = "<tr><td>" +today+ "</td><td>" +msg1+ "</td><td>"+msg2+"</td><td><span class='badge badge-success'>Active</span></td></tr>";
     $("table tbody").append(markup);
  }
 
     </script>
-</body>
-</html> 
+
+  </body>
+</html>
