@@ -5,15 +5,19 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
+    "start:dev": "start && dev",
     "dev": "webpack-dev-server --content-base src --hot --mode=development --port=5000",
+    "start": "node ./server/server.js",
     "lint": "eslint ./src --ext .js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "express": "4.17.0",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
+    "socket.io": "2.2.0",
     "video.js": "7.5.4"
   },
   "devDependencies": {
