@@ -399,7 +399,8 @@
  function tableUp(msg1, msg2, msg3) {
     var today = moment().format("ddd MMM DD YYYY HH:mm:ss");
     console.log(today);
-    var markup = "<tr><td>" +today+ "</td><td>" +msg1+ "</td><td>"+msg2+"</td><td><span class='badge badge-success'>Active</span></td></tr>";
+    let formattedDate = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate() + " " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() 
+    var markup = "<tr><td>" +formattedDate+ "</td><td>" +msg1+ "</td><td>"+msg2+"</td><td><span class='badge badge-success'>Active</span></td></tr>";
     $("table tbody").append(markup);
  }
 

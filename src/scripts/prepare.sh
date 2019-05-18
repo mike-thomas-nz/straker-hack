@@ -22,18 +22,6 @@ fi
 cd $path
 
 # # add overlay
-# ffmpeg -i $file -vf \
-#   "[in] \
-#     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${realname}':x=10:y=(h)/2-100, \
-#     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${email}':x=10:y=((h)/2)-75, \
-#     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${username}':x=10:y=((h)/2)-50, \
-#     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${job_id}':x=10:y=((h)/2), \
-#     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='PROPERTY OF ${owner}':x=10:y=((h)/2)+25, \
-#     drawtext=fontsize=16:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${ip}':x=10:y=((h)/2)+50, \
-#     drawtext=fontsize=16:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${city}':x=10:y=((h)/2)+75, \
-#     drawtext=fontsize=16:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${latlong}':x=10:y=((h)/2)+100 \
-#   [out]" -y $overlay
-
 ffmpeg -i $file -vf \
   "[in] \
     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${realname}':x=10:y=(h)/2-100, \
@@ -41,7 +29,19 @@ ffmpeg -i $file -vf \
     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${username}':x=10:y=((h)/2)-50, \
     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${job_id}':x=10:y=((h)/2), \
     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='PROPERTY OF ${owner}':x=10:y=((h)/2)+25, \
+    drawtext=fontsize=16:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${ip}':x=10:y=((h)/2)+50, \
+    drawtext=fontsize=16:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${city}':x=10:y=((h)/2)+75, \
+    drawtext=fontsize=16:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${latlong}':x=10:y=((h)/2)+100 \
   [out]" -y $overlay
+
+# ffmpeg -i $file -vf \
+#   "[in] \
+#     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${realname}':x=10:y=(h)/2-100, \
+#     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${email}':x=10:y=((h)/2)-75, \
+#     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${username}':x=10:y=((h)/2)-50, \
+#     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='${job_id}':x=10:y=((h)/2), \
+#     drawtext=fontsize=20:fontcolor=white:borderw=1:bordercolor=black@0.5:fontfile='/Users/mike/src/javascript/streaming/mike/assets/fonts/courier.ttf':text='PROPERTY OF ${owner}':x=10:y=((h)/2)+25 \
+#   [out]" -y $overlay
 
 
 # # segment for dash
