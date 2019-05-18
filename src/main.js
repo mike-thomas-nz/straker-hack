@@ -8,9 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'video.js/dist/video-js.css';
 import './style.css';
 
-let videoSrc = '/resources/video/rocket/640x480/rocket.mp4'
+let videoSrc = '/resources/video/animation/dash/animation.mpd'
 let videoType= 'application/dash+xml'
-let srtSrc = '/resources/subs/rocket/english_webvtt.srt'
+let srtSrc = '/resources/subs/animation/english.srt'
 
 videoplayer.init('my-player', {
   src: videoSrc,
