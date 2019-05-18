@@ -1,6 +1,6 @@
 import $ from "jquery";
 import { pausePlayer } from "./videoplayer";
-
+let srtSrc = '/resources/subs/animation/english.srt'
 var PF_SRT = function() {
   // eslint-disable-next-line
   var pattern = /(\d+)\n([\d:.]+)\s+-{2}\>\s+([\d:.]+)\n([\s\S]*?(?=\n{2}|$))/gm;
@@ -39,7 +39,7 @@ var PF_SRT = function() {
 
 // Load the segments in editor
 const loadSegments= () => {
-  $.get('resources/subs/rocket/english_webvtt.srt')
+  $.get(srtSrc)
     .done(function(text) {
       try {
         //Array with {line, startTime, endTime, text}
@@ -71,6 +71,7 @@ const saveSegments = (data) => {
 }
 
 $('.editable_seg').on('input', () =>{
+  // eslint-disable-next-line no-console
   console.log('edited...');
 })
 const editSegment = () => {
