@@ -85,8 +85,9 @@ setTimeout(() => {
     console.log('edited...');
   });
 
-  $('.save').click(e => {
+  $('.save').click(() => {
     console.log('click');
+    window.socket.emit('saved')
   });
 }, 1000)
 
