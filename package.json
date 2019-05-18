@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode=production",
     "dev": "webpack-dev-server --content-base src --hot --mode=development --port=5000",
-    "start": "node ./server/server.js",
+    "start": "node ./server/index.js",
     "lint": "eslint ./src --ext .js"
   },
   "author": "",
