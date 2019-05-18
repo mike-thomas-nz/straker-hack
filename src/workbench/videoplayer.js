@@ -1,7 +1,7 @@
 import videojs from "video.js"
 
 let player = undefined
-
+let currentCue = 1
 const init = (elementId, video, config, textTracks) => {
   player = videojs(elementId, config);
   player.ready(() => {
@@ -19,14 +19,17 @@ const init = (elementId, video, config, textTracks) => {
     tt.oncuechange = function () {
       if (tt.activeCues[0] !== undefined) {
         if(!isNaN(tt.activeCues[0].id)){
-          let id = tt.activeCues[0].id
+          let cueId = tt.activeCues[0].id
           let previousElements = document.getElementsByClassName('active-caption')
           for (let i=0; i<previousElements.length; i++) {
             previousElements[i].classList.remove('active-caption');
           }
-          let element = document.getElementById(`caption_${id}`)
+          let element = document.getElementById(`caption_${cueId}`)
           element.scrollIntoView({behavior: "smooth", block: "center"})
           element.setAttribute('class', 'active-caption')
+          if (cueId > 1) {
+            player.pause()
+          }
         }
       }
     }
@@ -34,9 +37,16 @@ const init = (elementId, video, config, textTracks) => {
 }
 
 // Pause player
-const pausePlayer = () => {
-  if (player) {
+const pause = () => {
+  if (player && !player.paused()) {
     player.pause()
+  }
+}
+
+// Play
+const play = () => {
+  if (player) {
+    player.play()
   }
 }
 
@@ -56,5 +66,6 @@ const createTextTracks = async (player, textTracks) => {
 
 export {
   init,
-  pausePlayer
+  play,
+  pause
 }
