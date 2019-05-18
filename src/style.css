@@ -29,8 +29,12 @@
 }
 
 /* --- HACK TAIRAWHITIT --- */
-body {
-    padding-top: 5rem;
+.top {
+    /* padding-top: 5rem; */
+    background-image: url('assets/images/Branding.png');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: top center;
 }
 
 .bd-placeholder-img {
@@ -46,4 +50,16 @@ body {
     .bd-placeholder-img-lg {
         font-size: 3.5rem;
     }
+}
+
+.text-block {
+    background-color:rgba(26, 25, 25, 0.788);
+    color: white;
+}
+
+.uploadimage-dragndrop {
+    border: 5px dashed lightgray;
+    height: 280px;
+    padding: 50px 100px;
+    width: 400px;
 }
