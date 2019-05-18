@@ -1,8 +1,9 @@
 import * as videoplayer from "./workbench/videoplayer";
-import 'socket.io-client';
+import io from 'socket.io-client';
 
 import './workbench/editor.js';
 import './workbench/util.js';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'video.js/dist/video-js.css';
@@ -28,3 +29,5 @@ videoplayer.init('my-player', {
   label: 'English',
   default: true
 }])
+
+const socket = io("http://localhost:3000")
