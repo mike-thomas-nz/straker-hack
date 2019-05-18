@@ -20,9 +20,9 @@
           <li class="nav-item">
             <a class="nav-link" href="admin.html">Admin</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="dashboard.html">Dashboard</a>
-          </li>
+          </li> -->
           <li class="nav-item active">
             <a class="nav-link" href="logging.html">Logging</a>
           </li>
@@ -63,28 +63,21 @@
                           <th>Date</th>
                           <th>User</th>
                           <th>Action</th>
+                          <th>Detail</th>
                       </tr>
                   </thead>
                   <tbody id="table_logging">
                       <tr>
-                        <td>May 12 2019 12:41:22</td>
+                        <td>Sat May 18 2019 16:29:35 GMT+1200 (New Zealand Standard Time)	</td>
                         <td>James Hanson</td>
                         <td>Successfully Processed Content</td>
+                        <td></td>
                       </tr>
                       <tr>
-                        <td>May 12 2019 12:41:22</td>
+                        <td>Sat May 18 2019 16:29:35 GMT+1200 (New Zealand Standard Time)	</td>
                         <td>James Hanson</td>
                         <td>Submitted Content for Processing</td>
-                      </tr>
-                      <tr>
-                        <td>May 12 2019 12:41:22</td>
-                        <td>James Hanson</td>
-                        <td>Logged In.</td>
-                      </tr>
-                      <tr>
-                        <td>May 11 2019 11:28:57</td>
-                        <td>John Boyd</td>
-                        <td>Logged In.</td>
+                        <td></td>
                       </tr>
                   </tbody>
               </table>
@@ -95,30 +88,35 @@
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
+
     $(function () {
   var socket = io.connect('http://localhost:3000/');
 
-socket.on('connect', function(){
-	console.log("connected");
-});
-   
+  socket.on('connect', function(){
+    console.log("connected");
+  });
+    
    socket.on('connected', function(msg){
-    $('#messages').append($('<li>').text(msg));
-    window.scrollTo(0, document.body.scrollHeight);
+    tableUp(msg[0], msg[1], '');
   });
 
   socket.on('disconnected', function(msg){
-    $('#messages').append($('<li>').text(msg));
-    window.scrollTo(0, document.body.scrollHeight);
+    tableUp(msg[0], msg[1], '');
   });
 
   socket.on('translate', function(msg){
-    $('#messages').append($('<li>').text(msg));
-    window.scrollTo(0, document.body.scrollHeight);
+    tableUp(msg[0], 'Translated' , msg[1]);
   });
 
  });
- </script>
+
+ function tableUp(msg1, msg2, msg3) {
+    var today = new Date();
+    console.log(today);
+    var markup = "<tr><td>" +today+ "</td><td>" +msg1+ "</td><td>"+msg2+"</td><td>"+msg3+"</td></tr>";
+    $("table tbody").append(markup);
+ }
+
     </script>
 </body>
-</html>
+</html> 

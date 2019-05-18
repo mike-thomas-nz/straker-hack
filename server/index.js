@@ -7,7 +7,7 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-var trans = "trans demo";
+var trans = "James Hanson";
 
 io.on('connection', function(socket){
   console.log('a user connected');
@@ -30,8 +30,8 @@ io.on('connection', function(socket){
     io.emit('translate', msg);
   });
 
-  socket.on('save', msg => {
-    console.log(msg);
+  socket.on('saved', msg => {
+    console.log("user saved a segment");
     io.emit('segment_saved', msg);
   });
 

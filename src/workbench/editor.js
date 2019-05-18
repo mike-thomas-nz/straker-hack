@@ -72,13 +72,15 @@ const saveSegments = (data) => {
 
 setTimeout(() => {
   $("[contenteditable='true']").each(function(){
-    $(this).bind('input', function(event) {
-      input(event)
+    $(this).bind('input', () => {
+      input()
     });
   });
 
   $('.save').click(() => {
-    player.play()
+    save()
+    console.log('click');
+    window.socket.emit('saved')
   });
 }, 1000)
 
