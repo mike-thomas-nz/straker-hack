@@ -25,9 +25,9 @@ io.on('connection', function(socket){
     io.emit('disconnected', discon);
   });
 
-  socket.on('chat message', function(msg){
+  socket.on('translate', function(msg){
     console.log(msg);
-    io.emit('chat message', msg);
+    io.emit('translate', msg);
   });
 
 });
