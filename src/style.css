@@ -47,3 +47,10 @@ body {
         font-size: 3.5rem;
     }
 }
+
+.uploadimage-dragndrop {
+    border: 5px dashed lightgray;
+    height: 280px;
+    padding: 50px 100px;
+    width: 400px;
+}
