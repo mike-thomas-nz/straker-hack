@@ -1,5 +1,5 @@
 import $ from "jquery";
-import { pausePlayer } from "./videoplayer";
+import * as player from "./videoplayer";
 let srtSrc = '/resources/subs/animation/english.srt'
 var PF_SRT = function() {
   // eslint-disable-next-line
@@ -70,29 +70,27 @@ const saveSegments = (data) => {
     })
 }
 
-const editSegment = () => {
-  pausePlayer()
-}
-
-// $('.save').on('click', e => {
-//   console.log('saved');
-//   // socket.emit('saved');
-// });
-
 setTimeout(() => {
-  $('.editable_seg').on('input', () =>{
-    // eslint-disable-next-line no-console
-    console.log('edited...');
+  $("[contenteditable='true']").each(function(){
+    $(this).bind('input', function(event) {
+      input(event)
+    });
   });
 
-  $('.save').click(e => {
-    console.log('click');
+  $('.save').click(() => {
+    player.play()
   });
 }, 1000)
 
+const input = () => {
+  player.pause()
+}
+
+const save = () => {
+  player.play()
+}
 export {
-  saveSegments,
-  editSegment
+  saveSegments
 }
 
 
