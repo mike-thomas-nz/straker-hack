@@ -47,7 +47,7 @@
         <li class="nav-item px-3">
           <a class="nav-link" href="logging.html">Logs</a>
         </li>
-      </ul>      
+      </ul>
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item d-md-down-none">
           <a class="nav-link" href="#">
@@ -381,7 +381,7 @@
   socket.on('connect', function(){
     console.log("connected");
   });
-    
+
    socket.on('connected', function(msg){
     tableUp(msg[0], msg[1], '');
   });
@@ -397,9 +397,10 @@
  });
 
  function tableUp(msg1, msg2, msg3) {
-    var today = moment().format("ddd MMM DD YYYY HH:mm:ss");
+    // var today = moment().format("ddd MMM DD YYYY HH:mm:ss");
+    var today = new Date()
     console.log(today);
-    let formattedDate = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate() + " " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() 
+    let formattedDate = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate() + " " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
     var markup = "<tr><td>" +formattedDate+ "</td><td>" +msg1+ "</td><td>"+msg2+"</td><td><span class='badge badge-success'>Active</span></td></tr>";
     $("table tbody").append(markup);
  }
