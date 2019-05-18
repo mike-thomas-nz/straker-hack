@@ -30,6 +30,11 @@ io.on('connection', function(socket){
     io.emit('translate', msg);
   });
 
+  socket.on('save', msg => {
+    console.log(msg);
+    io.emit('segment_saved', msg);
+  });
+
 });
 
 http.listen(port, function(){
