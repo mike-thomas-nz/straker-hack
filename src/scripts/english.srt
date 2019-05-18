@@ -1,0 +1,338 @@
+WEBVTT
+
+1
+00:03.000 --> 00:04.000
+- The whole point of Rocket Lab
+
+2
+00:04.000 --> 00:05.000
+is about democratising space,
+
+3
+00:05.000 --> 00:08.000
+and making space available for everybody.
+
+4
+00:08.000 --> 00:10.000
+It's an incredibly exciting
+time in space right now.
+
+5
+00:10.000 --> 00:12.000
+We're right on that tipping point
+
+6
+00:12.000 --> 00:14.000
+of space being a
+commercially-dominated domain
+
+7
+00:14.000 --> 00:16.000
+rather than a government-dominated domain.
+
+8
+00:17.000 --> 00:19.000
+We started with a blank sheet of paper.
+
+9
+00:19.000 --> 00:20.000
+And we said,
+
+10
+00:20.000 --> 00:23.000
+we want a launch for under
+$5 million every week.
+
+11
+00:23.000 --> 00:26.000
+That's a pretty absurd statement
+in the aerospace industry.
+
+12
+00:26.000 --> 00:28.000
+When you consider the average cost
+
+13
+00:28.000 --> 00:30.000
+of a launch vehicle is about $180 million,
+
+14
+00:30.000 --> 00:32.000
+and America as a country
+
+15
+00:32.000 --> 00:34.000
+went to space around about 20 times.
+
+16
+00:34.000 --> 00:37.000
+But the whole point is,
+that piece of paper,
+
+17
+00:37.000 --> 00:39.000
+those two requirements drove
+everything that we did.
+
+18
+00:39.000 --> 00:41.000
+Whether it be launch sites or engineering
+
+19
+00:41.000 --> 00:42.000
+or design and development.
+
+20
+00:44.000 --> 00:45.000
+We really took a very different approach,
+
+21
+00:45.000 --> 00:48.000
+we invested in lots of
+emerging technologies.
+
+22
+00:48.000 --> 00:50.000
+When we started 3D
+printing rocket engines,
+
+23
+00:50.000 --> 00:51.000
+we could see that technology
+
+24
+00:51.000 --> 00:54.000
+was going to play a very disruptive role
+
+25
+00:54.000 --> 00:56.000
+in trying to achieve what
+we wanted to achieve.
+
+26
+00:56.000 --> 00:57.000
+And that can be said for
+
+27
+00:57.000 --> 01:00.000
+a number of the technologies
+in the launch vehicle.
+
+28
+01:00.000 --> 01:02.000
+Rutherford is a very unique engine;
+
+29
+01:02.000 --> 01:03.000
+it's an electric turbo-pump cycle,
+
+30
+01:03.000 --> 01:06.000
+so it's like a hybrid of
+a rocket and electronics.
+
+31
+01:06.000 --> 01:09.000
+We created that cycle
+because it was the only cycle
+
+32
+01:09.000 --> 01:11.000
+that was going to meet our requirements
+
+33
+01:11.000 --> 01:13.000
+for launching weekly.
+
+34
+01:13.000 --> 01:15.000
+Normally you measure the time
+
+35
+01:15.000 --> 01:16.000
+to build a rocket engine in months.
+
+36
+01:16.000 --> 01:18.000
+We need to measure it in hours.
+
+37
+01:18.000 --> 01:20.000
+So with 3D printing,
+
+38
+01:20.000 --> 01:23.000
+we're able to print one
+rocket engine every 24 hours.
+
+39
+01:23.000 --> 01:24.000
+And we've always,
+
+40
+01:24.000 --> 01:25.000
+we've been very clear
+that we want to launch
+
+41
+01:25.000 --> 01:28.000
+at least once a week,
+over 50 times a year.
+
+42
+01:28.000 --> 01:31.000
+Contrast that to America, as a country,
+
+43
+01:31.000 --> 01:33.000
+launching 20 times a year.
+
+44
+01:33.000 --> 01:34.000
+So if we're successful,
+
+45
+01:34.000 --> 01:37.000
+we'll be launching more as a
+company than most countries.
+
+46
+01:38.000 --> 01:41.000
+All the launch sites in the
+world are government-owned.
+
+47
+01:41.000 --> 01:43.000
+So we created the only and the first
+
+48
+01:43.000 --> 01:46.000
+fully-private orbital launch site.
+
+49
+01:46.000 --> 01:47.000
+I think if you wrote down everything
+
+50
+01:47.000 --> 01:49.000
+on the piece of paper that you had to do
+
+51
+01:49.000 --> 01:53.000
+bilateral treaties, space
+agencies, legislation,
+
+52
+01:53.000 --> 01:55.000
+building launch vehicles, launch site,
+
+53
+01:55.000 --> 01:57.000
+it looks a little bit scary.
+
+54
+01:57.000 --> 01:58.000
+From my perspective,
+
+55
+01:58.000 --> 02:02.000
+New Zealand's a fantastic place
+for really really high tech.
+
+56
+02:02.000 --> 02:04.000
+Especially where there's
+a regulatory element,
+
+57
+02:04.000 --> 02:07.000
+because I think one of New
+Zealand's unique propositions
+
+58
+02:07.000 --> 02:08.000
+is the tricky regulatory stuff
+
+59
+02:08.000 --> 02:10.000
+can be dealt with very pragmatically.
+
+60
+02:10.000 --> 02:13.000
+It's a very straightforward
+and very transparent
+
+61
+02:13.000 --> 02:15.000
+and innovative place to do business.
+
+62
+02:16.000 --> 02:19.000
+To go to space and to
+consistently go to space,
+
+63
+02:19.000 --> 02:24.000
+you need a certain level of
+infrastructure and governance,
+
+64
+02:24.000 --> 02:28.000
+and quite frankly just
+sheer capital intelligence.
+
+65
+02:28.000 --> 02:30.000
+I think that's a real
+strength of New Zealanders.
+
+66
+02:30.000 --> 02:33.000
+For us it's not so much the technologies
+
+67
+02:33.000 --> 02:34.000
+that have been developed in New Zealand,
+
+68
+02:34.000 --> 02:38.000
+but more so the very very
+clever and educated people
+
+69
+02:38.000 --> 02:40.000
+with the New Zealand attitude
+
+70
+02:40.000 --> 02:42.000
+of happy to push the boundaries.
+
+71
+02:44.000 --> 02:47.000
+Space is one of those things
+that automatically defines
+
+72
+02:47.000 --> 02:49.000
+what level your country is operating at.
+
+73
+02:49.000 --> 02:51.000
+At the very peak of engineering.
+
+74
+02:51.000 --> 02:53.000
+And that's kind of the reality.
+
+75
+02:53.000 --> 02:56.000
+We expect to see quite an
+influx of space companies
+
+76
+02:56.000 --> 02:58.000
+coming down to New Zealand.
+
+77
+02:59.000 --> 03:03.000
+(upbeat instrumental music)
